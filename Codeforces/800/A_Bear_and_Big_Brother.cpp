@@ -4,12 +4,15 @@ using namespace std;
 #define ll long long
 
 void solveIt(){
-    string s;
-    cin >> s;
-    int n = s.size();
-    if(n > 4)
-        cout << s[0] << n - 2 << s[n - 1] << '\n';
-    else cout << s << '\n';
+    int a, b;
+    cin >> a >> b;
+    int years = 0;
+    while(a <= b){
+        years++;
+        a *= 3;
+        b *= 2;
+    }
+    cout << years << '\n';
 }
 
 int main(){
@@ -17,8 +20,8 @@ int main(){
     cin.tie(NULL);
     cout.tie(NULL);
 
-	int tt;
-    cin >> tt;
+	int tt = 1;
+    // cin >> tt;
     while(tt--){
         solveIt();            
     }
